@@ -4,10 +4,6 @@ module ExceptionHandler
   extend ActiveSupport::Concern
 
   included do
-    rescue_from Contentful::EmptyFieldError do |e|
-      render json: { message: e.message }, status: :not_found
-    end
-
     rescue_from Contentful::AccessDenied do |e|
       render json: { message: e.message }, status: :forbidden
     end
@@ -18,10 +14,6 @@ module ExceptionHandler
 
     rescue_from Contentful::BadRequest do |e|
       render json: { message: e.message }, status: :bad_request
-    end
-
-    rescue_from Contentful::EmptyFieldError do |e|
-      render json: { message: e.message }, status: :not_found
     end
 
     rescue_from Contentful::Error do |e|
