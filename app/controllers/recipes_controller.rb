@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.first.recipes
+    @pagy, @recipes = pagy_array(Recipe.first.recipes, items: 2)
   end
 
   def show

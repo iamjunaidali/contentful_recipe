@@ -13,3 +13,5 @@ table.table.table-striped
         td = recipe.title
         td = image_tag recipe.photo.url, class: "img_preview"
         td = link_to 'Show' , recipe_path(recipe.id)
+
+== pagy_bootstrap_nav(@pagy)
