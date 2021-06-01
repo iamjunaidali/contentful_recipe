@@ -34,6 +34,15 @@ gem 'rubycritic', require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# use contenful gem to consume data
+gem 'contentful'
+
+# use figaro for environment variables
+gem 'figaro'
+
+# use slim for compact and clean html
+gem 'slim-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

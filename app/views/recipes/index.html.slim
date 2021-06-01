@@ -1,0 +1,15 @@
+h1 Listing Contentful Configurations
+
+table.table.table-striped
+  thead
+    tr
+      th Name
+      th Image
+      th Show
+
+  tbody
+    - @recipes.each do |recipe|
+      tr
+        td = recipe.title
+        td = image_tag recipe.photo.url, class: "img_preview"
+        td = link_to 'Show' , recipe_path(recipe.id)

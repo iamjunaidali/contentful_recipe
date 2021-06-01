@@ -1,0 +1,19 @@
+h1 Recipe
+
+.row
+  .col-xs-6.col-md-6.col-lg-6
+    h1
+      = image_tag @recipe.photo.url, class: "img_show"
+
+  .col-xs-6.col-md-6.col-lg-6
+    h1 Name
+    h4 = @recipe.title
+
+    h1 List of Tags
+    h4 = @tags
+
+    h1 Description
+    h4 = @recipe.description
+
+    h1 Chef Name
+    h4 = @chef.name
